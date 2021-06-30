@@ -27,6 +27,23 @@ function capitalizeLetters(str) {
 
 // Continue: https://youtu.be/M2bJBuaOeOQ?t=1800
 
+function findLongestWord(sentence) {
+  let length = 0;
+  
+  if (!sentence || sentence === '') {
+    return -1;
+  }
+  
+  const arr = sentence.split(' ');
+  for (word of arr) {
+    if (word.length > length) {
+      length = word.length
+    }
+  }
+  
+  return length;
+}
+
 function maxCharacter(str) {
   const charMap = {};
 }
