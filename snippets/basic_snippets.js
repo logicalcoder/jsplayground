@@ -3,8 +3,10 @@ function reverseString(str) {
 }
 
 function isPalindrome(str) {
-  const reverseStr = str.split('').reverse().join('');
-  return str === reverseStr;
+  const re = /[\W_]/g;
+  const lowRegStr = str.toLowerCase().replace(re, '');
+  const reverseStr = lowRegStr.split('').reverse().join('');
+  return reverseStr === lowRegStr;
 }
 
 function reverseInt(int) {
